@@ -1,9 +1,11 @@
 package org.example;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Callable;
 
-public class Calculador implements Callable<List<Color>>{
+public class Calculador implements Callable<List<Color>> {
     private final int startY, endY, width, height, maxIterations;
 
     public Calculador(int startY, int endY, int width, int height, int maxIterations) {
@@ -15,8 +17,8 @@ public class Calculador implements Callable<List<Color>>{
     }
     //call
     @Override
-public List<Color> call() throws Exception {
-        List<Color> colors = new ArrayList<>();
+public java.util.List<Color> call() throws Exception {
+        java.util.List<Color> colors = new ArrayList<>();
         for (int y = startY; y < endY; y++) {
             for (int x = 0; x < width; x++) {
                 double zx, zy, cX, cY, tmp;
